@@ -2,7 +2,7 @@
 
 ## App Functionality
 
-Country dropdown was the base material ui select element, on change of the country value fetch call is fired to get the user details
+Country dropdown is the base material ui select element, on change of the country value fetch call is fired to get the user details
 
 If user call fails, the last stored users array in the local redux storage will be used to display user details
 
@@ -61,4 +61,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
