@@ -19,6 +19,10 @@ const useStyles = makeStyles(
     },
     select: {
       minWidth: 150,
+    },
+    userContainer: {
+      maxHeight: 'calc(100vh - 200px)',
+      overflow: 'auto',
     }
   },
   { name: 'App' }
@@ -58,13 +62,15 @@ const App = () => {
         {users.length > 0 && (
           <>
             <Typography variant="h6">User Details</Typography>
-            {users.map(user => (
-              <Grid container className={classes.userDetails}>
-                <Grid item md={3}>{user.name}</Grid>
-                <Grid item md={3}>{user.gender}</Grid>
-                <Grid item md={3}>{user.email}</Grid>
-              </Grid>
-            ))}
+            <div className={classes.userContainer}>
+              {users.map(user => (
+                <Grid container className={classes.userDetails}>
+                  <Grid item md={3}>{user.name}</Grid>
+                  <Grid item md={3}>{user.gender}</Grid>
+                  <Grid item md={3}>{user.email}</Grid>
+                </Grid>
+              ))}
+            </div>
           </>
         )}
     </div>
